@@ -7,7 +7,7 @@ import { CgMenuRight } from "react-icons/cg";
 
 export const Nav = () => {
   return (
-    <header className="h-16 px-4 sm:px-10 flex items-center justify-between">
+    <header className="h-20 px-4 sm:px-10 flex items-center justify-between">
       <div role="button">
         <CgMenuRight className="text-2xl" />
       </div>

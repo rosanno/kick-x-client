@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export const Featured = () => {
   return (
-    <section className="px-4 sm:px-10 mt-10 md:mt-28">
+    <section>
       <article className="space-y-6 md:space-y-10">
-        <div className="flex items-center gap-2 md:gap-10">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-10">
           <div className="w-[160px] lg:w-[130px]">
             <p className="text-[10px] md:text-sm">
               {featured.description}

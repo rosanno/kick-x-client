@@ -35,8 +35,8 @@ export const Brands = ({ brands }: BrandProps) => {
                 <Image
                   src={brand.brand_logo}
                   alt="logo"
-                  height={50}
-                  width={50}
+                  height={40}
+                  width={40}
                 />
               )}
               <h3 className="text-[13px] font-medium">

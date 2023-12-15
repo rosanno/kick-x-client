@@ -50,10 +50,10 @@ export const PopularCollections = ({
                 />
               </div>
               <div className="flex items-center justify-between p-5">
-                <h2 className="text-base font-semibold">
+                <h2 className="text-[15px] font-semibold">
                   {product.name}
                 </h2>
-                <h2 className="text-base font-semibold">
+                <h2 className="text-[15px] font-semibold">
                   {formatter.format(product.price)}
                 </h2>
               </div>

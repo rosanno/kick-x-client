@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { formatter } from "@/lib/utils";
 import { Products } from "@/types";
+import Link from "next/link";
 
 interface ProductProps {
   products: Products[];
@@ -16,10 +17,22 @@ export const PopularCollections = ({
   return (
     <section className="mt-16">
       <div>
-        <div>
+        <div className="flex items-center justify-between">
           <h1 className="text-lg md:text-2xl font-semibold">
             Popular Collections
           </h1>
+          <Link
+            href="/"
+            className="
+              uppercase 
+              text-[13px] 
+              font-bold
+              underline
+              mt-2
+            "
+          >
+            Discover all
+          </Link>
         </div>
         <div className="space-y-5 grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-4">
           {products.map((product) => (

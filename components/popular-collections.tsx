@@ -18,7 +18,7 @@ export const PopularCollections = ({
     <section className="mt-16">
       <div>
         <div className="flex items-center justify-between">
-          <h1 className="text-lg md:text-2xl font-semibold">
+          <h1 className="text-lg md:text-[22px] font-bold">
             Popular Collections
           </h1>
           <Link
@@ -34,7 +34,7 @@ export const PopularCollections = ({
             Discover all
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-6">
+        <div className="grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-5">
           {products.map((product) => (
             <div
               key={product.id}

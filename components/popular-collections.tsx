@@ -21,7 +21,7 @@ export const PopularCollections = ({
             Popular Collections
           </h1>
         </div>
-        <div className="space-y-5 grid grid-cols-2 gap-6 items-center mt-4">
+        <div className="space-y-5 grid md:grid-cols-2 md:gap-6 items-center md:mt-4">
           {products.map((product) => (
             <div
               key={product.id}

@@ -37,7 +37,7 @@ export const PopularCollections = ({
         <div className="grid md:grid-cols-2 gap-6 items-center mt-5">
           {products.map((product) => (
             <Link
-              href={`shoe/${product.id}`}
+              href={`${product.slug}/${product.id}`}
               key={product.id}
             >
               <div className="bg-[#F8F8FA] relative">

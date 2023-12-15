@@ -36,30 +36,31 @@ export const PopularCollections = ({
         </div>
         <div className="grid md:grid-cols-2 gap-6 items-center mt-5">
           {products.map((product) => (
-            <div
+            <Link
+              href={`shoe/${product.id}`}
               key={product.id}
-              className="bg-[#F8F8FA] relative"
             >
-              <div className="flex items-center justify-center">
-                <Image
-                  src={product.images[0]?.image_path}
-                  alt="Product Images"
-                  height={290}
-                  width={290}
-                  className="h-72 w-72 object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-between p-5">
-                <h2 className="text-[15px] font-semibold">
-                  {product.name}
-                </h2>
-                <h2 className="text-[15px] font-semibold">
-                  {formatter.format(product.price)}
-                </h2>
-              </div>
-              <div
-                role="button"
-                className="
+              <div className="bg-[#F8F8FA] relative">
+                <div className="flex items-center justify-center">
+                  <Image
+                    src={product.images[0]?.image_path}
+                    alt="Product Images"
+                    height={290}
+                    width={290}
+                    className="h-72 w-72 object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-between p-5">
+                  <h2 className="text-[15px] font-semibold">
+                    {product.name}
+                  </h2>
+                  <h2 className="text-[15px] font-semibold">
+                    {formatter.format(product.price)}
+                  </h2>
+                </div>
+                <div
+                  role="button"
+                  className="
                   flex 
                   items-center 
                   gap-1.5 
@@ -75,13 +76,14 @@ export const PopularCollections = ({
                   top-4 
                   right-4
                 "
-              >
-                <ShoppingBag className="h-4 w-4" />
-                <span className="text-xs font-semibold">
-                  Add to Card
-                </span>
+                >
+                  <ShoppingBag className="h-4 w-4" />
+                  <span className="text-xs font-semibold">
+                    Add to Card
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

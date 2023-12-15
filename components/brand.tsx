@@ -49,7 +49,7 @@ export const Brands = ({ brands }: BrandProps) => {
           ))}
         </div>
       </div>
-      <Separator className="my-2" />
+      <Separator className="my-3" />
     </section>
   );
 };

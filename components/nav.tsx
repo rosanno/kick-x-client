@@ -4,10 +4,21 @@ import Link from "next/link";
 import { Search, Heart } from "lucide-react";
 import { BsHandbag } from "react-icons/bs";
 import { CgMenuRight } from "react-icons/cg";
+import { useScrollHide } from "@/hooks/use-scroll-hide";
+import { cn } from "@/lib/utils";
 
 export const Nav = () => {
+  const { isScrolledUp } = useScrollHide();
+
   return (
-    <header className="h-20 px-4 sm:px-10 flex items-center justify-between">
+    <header
+      className={cn(
+        "fixed inset-0 w-full max-w-7xl mx-auto z-20 transition-all duration-300 ease-in-out h-20 px-4 sm:px-12 flex items-center justify-between",
+        isScrolledUp
+          ? "translate-y-0 bg-white"
+          : "-translate-y-full opacity-0"
+      )}
+    >
       <div role="button">
         <CgMenuRight className="text-2xl" />
       </div>

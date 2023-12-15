@@ -14,7 +14,7 @@ export const Featured = () => {
               {featured.description}
             </p>
           </div>
-          <div className="w-full xl:w-[700px]">
+          <div className="w-full md:w-[500px] lg:w-[750px] xl:w-[750px]">
             <h1
               className={cn(
                 "text-4xl md:text-5xl lg:text-7xl font-medium uppercase leading-tight"

@@ -17,11 +17,11 @@ export const PopularCollections = ({
     <section className="mt-16">
       <div>
         <div>
-          <h1 className="md:text-2xl font-semibold">
+          <h1 className="text-lg md:text-2xl font-semibold">
             Popular Collections
           </h1>
         </div>
-        <div className="space-y-5 grid md:grid-cols-2 md:gap-6 items-center md:mt-4">
+        <div className="space-y-5 grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-4">
           {products.map((product) => (
             <div
               key={product.id}

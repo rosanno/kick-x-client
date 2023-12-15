@@ -1,5 +1,8 @@
 import getShoeDetails from "@/actions/get-shoe-details";
 
+import { ShoeImages } from "./_components/shoe-images";
+import { ShoeDetails } from "./_components/shoe-details";
+
 const ShoeDetailsPage = async ({
   params,
 }: {
@@ -9,7 +12,14 @@ const ShoeDetailsPage = async ({
 
   return (
     <div className="px-4 sm:px-10 mt-10 md:mt-32">
-      Shoe Details Pages
+      <section>
+        <article>
+          <ShoeImages images={details.images} />
+        </article>
+        <article>
+          <ShoeDetails />
+        </article>
+      </section>
     </div>
   );
 };

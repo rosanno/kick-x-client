@@ -23,7 +23,7 @@ export interface Products {
   updatedAt: Date;
 }
 
-interface Image {
+export interface Image {
   id: string;
   image_path: string;
   productId: string;

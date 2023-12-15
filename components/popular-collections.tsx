@@ -34,7 +34,7 @@ export const PopularCollections = ({
             Discover all
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-5">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-6 items-center mt-5">
           {products.map((product) => (
             <div
               key={product.id}

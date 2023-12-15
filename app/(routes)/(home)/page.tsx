@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import { Brands } from "@/components/brand";
-import { Featured } from "@/components/featured";
+import { Brands } from "./_components/brand";
+import { Featured } from "./_components/featured";
 
 async function getBrands() {
   try {

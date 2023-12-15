@@ -17,7 +17,7 @@ export const Brands = ({ brands }: BrandProps) => {
   return (
     <section className="mt-6">
       <div className="flex items-center justify-between">
-        <div>
+        <div className="hidden md:flex flex-col">
           <h1 className="text-xs md:text-[13px]">
             Top rated
           </h1>
@@ -39,7 +39,7 @@ export const Brands = ({ brands }: BrandProps) => {
                   width={40}
                 />
               )}
-              <h3 className="text-[13px] font-medium">
+              <h3 className="hidden md:block text-[13px] font-medium">
                 {brand.brand_name}
               </h3>
               {index !== brands.length - 1 && (

@@ -34,7 +34,7 @@ export const PopularCollections = ({
             Discover all
           </Link>
         </div>
-        <div className="space-y-5 grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-4">
+        <div className="grid md:grid-cols-2 gap-2 md:gap-6 items-center md:mt-6">
           {products.map((product) => (
             <div
               key={product.id}
@@ -44,8 +44,8 @@ export const PopularCollections = ({
                 <Image
                   src={product.images[0]?.image_path}
                   alt="Product Images"
-                  height={300}
-                  width={300}
+                  height={290}
+                  width={290}
                   className="h-72 w-72 object-contain"
                 />
               </div>

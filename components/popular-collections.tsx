@@ -2,10 +2,10 @@
 
 import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { formatter } from "@/lib/utils";
 import { Products } from "@/types";
-import Link from "next/link";
 
 interface ProductProps {
   products: Products[];

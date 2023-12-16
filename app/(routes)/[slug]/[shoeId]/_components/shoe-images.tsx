@@ -34,7 +34,7 @@ export const ShoeImages = ({ images }: ShoeImages) => {
           </div>
         ))}
       </div>
-      <div className="bg-[#EBEBEB] w-full h-[540px] p-5 sm:p-6 flex items-center justify-center">
+      <div className="bg-[#EBEBEB] w-full h-[440px] md:h-[540px] p-5 sm:p-6 flex items-center justify-center">
         <Image
           src={images[selectedImage].image_path}
           alt="shoe images"

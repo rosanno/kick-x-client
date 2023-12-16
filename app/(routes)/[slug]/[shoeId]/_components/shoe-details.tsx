@@ -4,6 +4,8 @@ import { useState } from "react";
 
 import { cn, formatter } from "@/lib/utils";
 import { Products } from "@/types";
+import { Button } from "@/components/ui/button";
+import { Heart } from "lucide-react";
 
 interface ShoeDetailsProps {
   data: Products;
@@ -52,6 +54,37 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="flex items-center justify-between gap-3 mb-3 mt-5">
+        <div className="flex-1">
+          <div
+            role="button"
+            className="
+              bg-[#313131]
+              hover:bg-opacity-60
+              transition
+              duration-300
+              rounded-3xl 
+              text-white 
+              text-sm 
+              text-center 
+              font-medium 
+              uppercase 
+              p-3
+            "
+          >
+            Add to cart
+          </div>
+        </div>
+        <div>
+          <Button
+            variant="ghost"
+            size={"icon"}
+            className="bg-gray-100 bg-opacity-75 rounded-full p-2"
+          >
+            <Heart className="h-5 w-5" />
+          </Button>
         </div>
       </div>
     </div>

@@ -116,6 +116,20 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
           wide selection of comfortable.
         </p>
       </div>
+      <Separator className="my-4" />
+      <div className="space-y-4">
+        <h4 className="text-sm font-semibold">
+          Free Shipping & Returns
+        </h4>
+        <p className="text-muted-foreground text-xs">
+          Free standard shipping and free 60-day return.
+          <span className="text-black font-semibold underline">
+            Learn more. Return policy exclusions apply.
+          </span>
+        </p>
+      </div>
+      <Separator className="my-4" />
+      <div></div>
     </div>
   );
 };

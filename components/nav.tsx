@@ -4,8 +4,11 @@ import Link from "next/link";
 import { Search, Heart } from "lucide-react";
 import { BsHandbag } from "react-icons/bs";
 import { CgMenuRight } from "react-icons/cg";
+
 import { useScrollHide } from "@/hooks/use-scroll-hide";
 import { cn } from "@/lib/utils";
+
+import { Logo } from "./ui/logo";
 
 export const Nav = () => {
   const { isScrolledUp } = useScrollHide();
@@ -23,7 +26,7 @@ export const Nav = () => {
         <CgMenuRight className="text-2xl" />
       </div>
       <Link href="/" className="text-xl font-extrabold">
-        Kick X
+        <Logo />
       </Link>
       <div className="flex items-center gap-2 sm:gap-4">
         <div role="button">

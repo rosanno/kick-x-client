@@ -6,6 +6,7 @@ import { cn, formatter } from "@/lib/utils";
 import { Products } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 interface ShoeDetailsProps {
   data: Products;
@@ -86,6 +87,34 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
             <Heart className="h-5 w-5" />
           </Button>
         </div>
+      </div>
+      <div className="space-y-1.5 mt-10">
+        <h4 className="text-sm font-semibold">Shipping</h4>
+        <p className="text-muted-foreground text-xs">
+          To get shipping information{" "}
+          <span className="text-slate-900 font-semibold underline">
+            Edit Location
+          </span>
+        </p>
+      </div>
+      <Separator className="my-4" />
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h4 className="text-sm font-semibold">
+            Free Pickup
+          </h4>
+          <div
+            role="button"
+            className="text-xs text-[#313131] font-semibold underline"
+          >
+            Find a Shop
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground leading-5">
+          Find your perfect pair of different kind of shoes
+          on our app. From running to casual wear, we have a
+          wide selection of comfortable.
+        </p>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const ShoeDetailsPage = async ({
 
   return (
     <div className="px-4 sm:px-10 mt-28 md:mt-32">
-      <section className="grid md:grid-cols-3">
+      <section className="grid md:grid-cols-3 md:gap-24">
         <article className="col-span-2">
           <ShoeImages images={details.images} />
         </article>

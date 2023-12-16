@@ -31,8 +31,8 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
           {data.description}
         </p>
       </div>
-      <div>
-        <h4 className="text-sm font-semibold mt-5">
+      <div className="mt-5">
+        <h4 className="text-sm font-semibold">
           Select Size
         </h4>
         <div className="flex items-center flex-wrap gap-2.5 mt-3">

@@ -11,7 +11,7 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
   return (
     <div>
       <div className="space-y-1.5">
-        <h1 className="md:text-xl font-bold">
+        <h1 className="md:text-2xl font-bold">
           {data.name}
         </h1>
         <h2 className="text-[13px]">

@@ -11,7 +11,7 @@ const ShoeDetailsPage = async ({
   const details = await getShoeDetails(params.shoeId);
 
   return (
-    <div className="px-4 sm:px-10 mt-10 md:mt-32">
+    <div className="px-4 sm:px-10 mt-28 md:mt-32">
       <section>
         <article>
           <ShoeImages images={details.images} />

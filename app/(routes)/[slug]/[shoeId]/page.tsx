@@ -16,7 +16,7 @@ const ShoeDetailsPage = async ({
         <article className="col-span-2">
           <ShoeImages images={details.images} />
         </article>
-        <article className="col-span-1">
+        <article className="col-span-1 mt-16 lg:mt-0">
           <ShoeDetails data={details} />
         </article>
       </section>

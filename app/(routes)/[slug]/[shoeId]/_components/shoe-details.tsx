@@ -57,7 +57,7 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-between gap-3 mb-3 mt-5">
+      <div className="flex items-center justify-between gap-3 mt-5">
         <div className="flex-1">
           <div
             role="button"
@@ -88,7 +88,7 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
           </Button>
         </div>
       </div>
-      <div className="space-y-1.5 mt-10">
+      <div className="space-y-1.5 mt-8">
         <h4 className="text-sm font-semibold">Shipping</h4>
         <p className="text-muted-foreground text-xs">
           To get shipping information{" "}

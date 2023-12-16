@@ -18,9 +18,17 @@ export interface Products {
   price: number;
   discount: number;
   images: Image[];
+  sizes: Size[];
   colorId: string;
   createdAt: Date;
   updatedAt: Date;
+}
+
+export interface Size {
+  id: string;
+  size: number;
+  quantity: number;
+  productId: string;
 }
 
 export interface Image {

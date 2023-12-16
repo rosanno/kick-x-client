@@ -14,7 +14,7 @@ export const ShoeImages = ({ images }: ShoeImages) => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <div className="flex flex-col-reverse md:flex-row gap-12">
+    <div className="flex flex-col-reverse md:flex-row gap-2 md:gap-12">
       <div className="grid grid-cols-4 md:grid-cols-1 items-center gap-2 mt-2.5 md:mt-0">
         {images.map((image, index) => (
           <div

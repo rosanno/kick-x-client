@@ -22,8 +22,9 @@ export const Nav = () => {
           : "-translate-y-full opacity-0"
       )}
     >
-      <div role="button">
-        <CgMenuRight className="text-2xl" />
+      <div role="button" className="space-y-2">
+        <span className="block w-8 h-0.5 bg-gray-600"></span>
+        <span className="block w-5 h-0.5 ml-3 bg-gray-600"></span>
       </div>
       <Link href="/" className="text-xl font-extrabold">
         <Logo />

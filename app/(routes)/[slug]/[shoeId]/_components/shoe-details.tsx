@@ -26,8 +26,24 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
           {data.gender}'s Shoe
         </h2>
         <h3 className="text-lg font-[600]">
-          {formatter.format(data.price)}
+          {data.discount !== 0 &&
+            formatter.format(data.price * data.discount)}
         </h3>
+        <div className="flex items-center gap-1">
+          <h3
+            className={cn(
+              "text-lg font-[600]",
+              data.discount !== 0 &&
+                "text-muted-foreground text-[13px] line-through"
+            )}
+          >
+            {data.discount !== 0 &&
+              formatter.format(data.price)}
+          </h3>{" "}
+          <span className="text-[13px] text-gray-500">
+            -{data.discount * 100}%
+          </span>
+        </div>
       </div>
       <div className="mt-5">
         <p className="text-muted-foreground text-[13px] leading-6">

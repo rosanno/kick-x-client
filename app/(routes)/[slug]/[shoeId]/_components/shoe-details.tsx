@@ -37,12 +37,13 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
                 "text-muted-foreground text-[13px] line-through"
             )}
           >
-            {data.discount !== 0 &&
-              formatter.format(data.price)}
+            {formatter.format(data.price)}
           </h3>{" "}
-          <span className="text-[13px] text-gray-500">
-            -{data.discount * 100}%
-          </span>
+          {data.discount !== 0 && (
+            <span className="text-[13px] text-gray-500">
+              -{data.discount * 100}%
+            </span>
+          )}
         </div>
       </div>
       <div className="mt-5">

@@ -10,7 +10,7 @@ export default async function Home() {
   const products = await getPopularCollections();
 
   return (
-    <div className="px-4 sm:px-10 mt-10 md:mt-44">
+    <div className="px-4 sm:px-10 mt-24 md:mt-44">
       <Featured />
       <Brands brands={brands} />
       <PopularCollections products={products} />

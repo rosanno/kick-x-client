@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Search, Heart } from "lucide-react";
 import { BsHandbag } from "react-icons/bs";
-import { CgMenuRight } from "react-icons/cg";
 
 import { useScrollHide } from "@/hooks/use-scroll-hide";
 import { cn } from "@/lib/utils";

@@ -23,11 +23,11 @@ import { Separator } from "./ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="px-4 sm:px-10 sm:mt-24">
-      <div className="grid md:grid-cols-4 items-center md:gap-10">
-        <div className="col-span-1">
+    <footer className="px-4 sm:px-10 mt-20 sm:mt-24">
+      <div className="grid lg:grid-cols-4 items-center md:gap-10">
+        <div className="col-span-4 md:col-span-1">
           <Logo />
-          <div className="space-x-2 mt-2.5">
+          <div className="space-x-2 mt-5">
             <Button
               variant={"ghost"}
               size={"icon"}
@@ -76,7 +76,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 col-span-3 lg:ml-28">
+        <div className="grid grid-cols-4 gap-3 xl:gap-24 col-span-3 lg:ml-28">
           <div className="space-y-4 mt-6 md:mt-0">
             <h2 className="text-[13px] font-semibold">
               Links

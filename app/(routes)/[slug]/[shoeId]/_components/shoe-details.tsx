@@ -64,20 +64,23 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
         </h4>
         <div className="flex items-center flex-wrap gap-2.5 mt-3">
           {data.sizes.map((size, index) => (
-            <div
+            <button
               key={size.id}
-              role="button"
+              disabled={size.quantity === 0}
               className={cn(
                 "bg-[#F3F3F5] h-10 w-10 rounded-xl flex items-center justify-center",
                 selectedSize === index &&
-                  "bg-[#313131] text-[#F3F3F5]"
+                  "bg-[#313131] text-[#F3F3F5]",
+                size.quantity > 0
+                  ? "bg-gray-100/75"
+                  : "bg-gray-100/80 opacity-40"
               )}
               onClick={() => setSelectedSize(index)}
             >
-              <div className="text-[13px] font-medium">
+              <span className="text-[13px] font-medium">
                 {size.size}
-              </div>
-            </div>
+              </span>
+            </button>
           ))}
         </div>
       </div>

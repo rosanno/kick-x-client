@@ -16,6 +16,13 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
   const [selectedSize, setSelectedSize] =
     useState<number>();
 
+  const calculateDiscountedPrice = () => {
+    const discountAmount =
+      (data.price * data.discount) / 100;
+    const discountedPrice = data.price - discountAmount;
+    return discountedPrice;
+  };
+
   return (
     <div>
       <div className="space-y-1.5">
@@ -27,7 +34,7 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
         </h2>
         <h3 className="text-lg font-[600]">
           {data.discount !== 0 &&
-            formatter.format(data.price * data.discount)}
+            formatter.format(calculateDiscountedPrice())}
         </h3>
         <div className="flex items-center gap-1">
           <h3

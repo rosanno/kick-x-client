@@ -68,11 +68,11 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
               key={size.id}
               disabled={size.quantity === 0}
               className={cn(
-                "bg-[#F3F3F5] h-10 w-10 rounded-xl flex items-center justify-center hover:bg-[#313131] hover:text-[#F3F3F5] transition duration-300",
+                "bg-[#F3F3F5] h-10 w-10 rounded-xl flex items-center justify-center transition duration-300",
                 selectedSize === index &&
                   "bg-[#313131] text-[#F3F3F5]",
                 size.quantity > 0
-                  ? "bg-gray-100/75"
+                  ? "hover:bg-[#313131] hover:text-[#F3F3F5]"
                   : "bg-gray-100/80 opacity-40"
               )}
               onClick={() => setSelectedSize(index)}

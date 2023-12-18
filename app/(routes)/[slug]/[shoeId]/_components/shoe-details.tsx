@@ -73,7 +73,7 @@ export const ShoeDetails = ({ data }: ShoeDetailsProps) => {
                   "bg-[#313131] text-[#F3F3F5]",
                 size.quantity > 0
                   ? "hover:bg-[#313131] hover:text-[#F3F3F5]"
-                  : "bg-gray-100/80 opacity-40"
+                  : "bg-gray-100/80 opacity-40 cursor-not-allowed"
               )}
               onClick={() => setSelectedSize(index)}
             >

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
+import { signIn } from "next-auth/react";
 
 import {
   Form,
@@ -33,7 +34,17 @@ const SignInPage = () => {
   const onSubmit = async (
     values: z.infer<typeof formSchema>
   ) => {
-    console.log(values);
+    try {
+      const res = await signIn("credentials", {
+        redirect: false,
+        email: values.email,
+        password: values.password,
+      });
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

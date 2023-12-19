@@ -37,11 +37,11 @@ const SignInPage = () => {
   return (
     <section className="w-full max-w-sm mx-auto py-4 px-5">
       <div className="text-center space-y-3 mb-7">
-        <h1 className="font-bold text-xl">Sign in</h1>
-        <h2 className="text-[13px] leading-5 text-muted-foreground">
+        <h2 className="font-bold text-2xl">Sign in</h2>
+        <h3 className="text-[13px] leading-5 text-muted-foreground">
           Welcome back! Enter your email and <br />
           password below to sign in.
-        </h2>
+        </h3>
       </div>
       <Form {...form}>
         <form

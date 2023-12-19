@@ -11,5 +11,9 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return (
+    <main className="h-screen w-full flex items-center">
+      {children}
+    </main>
+  );
 }

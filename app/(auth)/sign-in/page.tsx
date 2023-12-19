@@ -96,6 +96,7 @@ const SignInPage = () => {
                 </FormLabel>
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="Enter your password"
                     {...field}
                   />

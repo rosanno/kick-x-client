@@ -37,7 +37,12 @@ const SignInPage = () => {
 
   return (
     <section className="w-full max-w-sm mx-auto py-4 px-5">
-      <div className="text-center space-y-3 mb-7">
+      <div className="flex flex-col items-center text-center space-y-3 mb-7">
+        <div className="bg-[#313131] h-11 w-11 rounded-full flex items-center justify-center mb-1.5">
+          <h1 className="text-5xl text-white font-merriweather">
+            K
+          </h1>
+        </div>
         <h2 className="font-bold text-2xl">Sign in</h2>
         <h3 className="text-[13px] leading-5 text-muted-foreground">
           Welcome back! Enter your email and <br />

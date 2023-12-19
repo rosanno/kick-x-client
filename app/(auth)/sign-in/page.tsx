@@ -113,7 +113,13 @@ const SignInPage = () => {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full"
+            className="
+              w-full 
+              bg-[#313131] 
+              hover:bg-[#444444] 
+              transition 
+              duration-300
+            "
           >
             Sign in
           </Button>
@@ -121,7 +127,18 @@ const SignInPage = () => {
       </Form>
       <div className="relative mt-10">
         <div className="border-b" />
-        <div className="bg-white rounded-full absolute left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 p-2.5">
+        <div
+          className="
+          bg-white 
+          rounded-full 
+          absolute 
+          left-1/2 
+          bottom-1/2 
+          translate-y-1/2 
+          -translate-x-1/2 
+          p-2.5
+        "
+        >
           <span className="text-base text-muted-foreground">
             or
           </span>

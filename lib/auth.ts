@@ -36,14 +36,14 @@ export const authOptions: NextAuthOptions = {
 
         try {
           customer = await axios.post(
-            `${process.env.NEXT_PUBLIC_API_URL}/customers/sign-in`,
+            `${process.env.NEXT_PUBLIC_API_URL}/auth/customers/sign-in`,
             credentials
           );
         } catch (error) {
           console.log("AUTH ERROR", error);
         }
 
-        console.log(customer);
+        console.log(customer?.data);
 
         if (
           !customer ||

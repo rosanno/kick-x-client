@@ -107,6 +107,14 @@ const SignInPage = () => {
           </Link>
         </p>
       </div>
+      <div className="relative mt-10">
+        <div className="border-b" />
+        <div className="bg-white absolute left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 p-2.5">
+          <span className="text-base text-muted-foreground">
+            or
+          </span>
+        </div>
+      </div>
     </section>
   );
 };

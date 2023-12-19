@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Eye, EyeOff } from "lucide-react";
 
 const formSchema = z.object({
   email: z.string().min(1).email(),
@@ -25,6 +26,7 @@ const formSchema = z.object({
 
 const SignInPage = () => {
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -100,12 +102,31 @@ const SignInPage = () => {
                   Password
                 </FormLabel>
                 <FormControl>
-                  <Input
-                    type="password"
-                    disabled={loading}
-                    placeholder="Enter your password"
-                    {...field}
-                  />
+                  <div className="relative">
+                    <Input
+                      type={
+                        !showPassword ? "password" : "text"
+                      }
+                      disabled={loading}
+                      placeholder="Enter your password"
+                      {...field}
+                    />
+                    {!showPassword ? (
+                      <EyeOff
+                        className="h-4 w-4 absolute top-2.5 right-2.5 text-muted-foreground"
+                        onClick={() =>
+                          setShowPassword(true)
+                        }
+                      />
+                    ) : (
+                      <Eye
+                        className="h-4 w-4 absolute top-2.5 right-2.5 text-muted-foreground"
+                        onClick={() =>
+                          setShowPassword(false)
+                        }
+                      />
+                    )}
+                  </div>
                 </FormControl>
               </FormItem>
             )}

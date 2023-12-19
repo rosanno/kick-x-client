@@ -93,7 +93,7 @@ const SignInPage = () => {
           Don't have an account?{" "}
           <Link
             href="/sign-up"
-            className="text-black font-semibold underline"
+            className="text-black font-semibold underline ml-1"
           >
             Sign up
           </Link>

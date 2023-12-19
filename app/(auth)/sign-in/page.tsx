@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().min(1).email(),
@@ -87,6 +88,17 @@ const SignInPage = () => {
           </Button>
         </form>
       </Form>
+      <div className="mt-5">
+        <p className="text-center text-[13px] text-muted-foreground">
+          Don't have an account?{" "}
+          <Link
+            href="/sign-up"
+            className="text-black font-semibold underline"
+          >
+            Sign up
+          </Link>
+        </p>
+      </div>
     </section>
   );
 };

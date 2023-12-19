@@ -107,7 +107,7 @@ const SignInPage = () => {
       </div>
       <div className="mt-6">
         <Button variant={"ghost"} className="w-full">
-          <FcGoogle className="text-2xl mr-2" />
+          <FcGoogle className="text-xl mr-2.5" />
           <span className="text-sm text-muted-foreground">
             Sign With Google
           </span>

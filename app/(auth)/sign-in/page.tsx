@@ -97,17 +97,6 @@ const SignInPage = () => {
           </Button>
         </form>
       </Form>
-      <div className="mt-5">
-        <p className="text-center text-[13px] text-muted-foreground">
-          Don't have an account?{" "}
-          <Link
-            href="/sign-up"
-            className="text-black font-semibold underline ml-1"
-          >
-            Sign up
-          </Link>
-        </p>
-      </div>
       <div className="relative mt-10">
         <div className="border-b" />
         <div className="bg-white rounded-full absolute left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 p-2.5">
@@ -123,6 +112,17 @@ const SignInPage = () => {
             Sign With Google
           </span>
         </Button>
+      </div>
+      <div className="mt-8">
+        <p className="text-center text-[13px] text-muted-foreground">
+          Don't have an account?{" "}
+          <Link
+            href="/sign-up"
+            className="text-black font-semibold underline ml-1"
+          >
+            Sign up
+          </Link>
+        </p>
       </div>
     </section>
   );

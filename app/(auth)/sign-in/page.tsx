@@ -40,8 +40,6 @@ const SignInPage = () => {
         email: values.email,
         password: values.password,
       });
-
-      console.log(res);
     } catch (error) {
       console.log(error);
     }

@@ -43,8 +43,6 @@ export const authOptions: NextAuthOptions = {
           console.log("AUTH ERROR", error);
         }
 
-        console.log(customer?.data);
-
         if (
           !customer ||
           !(await compare(

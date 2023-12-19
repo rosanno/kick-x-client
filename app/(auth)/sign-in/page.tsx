@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
 
 import {
   Form,
@@ -109,11 +110,19 @@ const SignInPage = () => {
       </div>
       <div className="relative mt-10">
         <div className="border-b" />
-        <div className="bg-white absolute left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 p-2.5">
+        <div className="bg-white rounded-full absolute left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 p-2.5">
           <span className="text-base text-muted-foreground">
             or
           </span>
         </div>
+      </div>
+      <div className="mt-6">
+        <Button variant={"ghost"} className="w-full">
+          <FcGoogle className="text-2xl mr-2" />
+          <span className="text-sm text-muted-foreground">
+            Sign With Google
+          </span>
+        </Button>
       </div>
     </section>
   );

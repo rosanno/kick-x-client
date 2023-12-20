@@ -61,4 +61,18 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    async session({ session }) {
+      return session;
+    },
+    async signIn({ profile }) {
+      console.log(profile);
+
+      return true;
+    },
+    jwt: ({ token, user }) => {
+      console.log("user", user);
+      return token;
+    },
+  },
 };

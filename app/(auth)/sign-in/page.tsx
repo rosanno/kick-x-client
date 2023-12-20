@@ -43,7 +43,6 @@ const SignInPage = () => {
     try {
       setLoading(true);
       const res = await signIn("credentials", {
-        redirect: false,
         email: values.email,
         password: values.password,
       });

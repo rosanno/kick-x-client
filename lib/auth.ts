@@ -74,5 +74,10 @@ export const authOptions: NextAuthOptions = {
       console.log("user", user);
       return token;
     },
+    async redirect({ url, baseUrl }) {
+      console.log("url", url);
+      console.log("baseUrl", baseUrl);
+      return baseUrl;
+    },
   },
 };

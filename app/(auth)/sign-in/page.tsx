@@ -14,6 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -90,6 +91,7 @@ const SignInPage = () => {
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -128,6 +130,7 @@ const SignInPage = () => {
                     )}
                   </div>
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -166,7 +169,12 @@ const SignInPage = () => {
         </div>
       </div>
       <div className="mt-6">
-        <Button variant={"ghost"} className="w-full">
+        <Button
+          type="button"
+          variant={"ghost"}
+          className="w-full"
+          onClick={() => signIn("google")}
+        >
           <FcGoogle className="text-xl mr-2.5" />
           <span className="text-sm text-muted-foreground">
             Sign With Google

@@ -62,8 +62,14 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ session }) {
-      return session;
+    async session({ session, token }) {
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id,
+        },
+      };
     },
     async signIn({ profile }) {
       console.log(profile);
@@ -71,12 +77,16 @@ export const authOptions: NextAuthOptions = {
       return true;
     },
     jwt: ({ token, user }) => {
-      console.log("user", user);
+      if (user) {
+        const u = user as unknown as any;
+        return {
+          ...token,
+          id: u.id,
+        };
+      }
       return token;
     },
     async redirect({ url, baseUrl }) {
-      console.log("url", url);
-      console.log("baseUrl", baseUrl);
       return baseUrl;
     },
   },

@@ -72,7 +72,27 @@ export const authOptions: NextAuthOptions = {
       };
     },
     async signIn({ profile }) {
-      console.log(profile);
+      try {
+        const response = await axios.post(
+          `${process.env.NEXT_PUBLIC_API_URL}/auth/customers/sign-up`,
+          {
+            name: profile?.name,
+            email: profile?.email,
+            picture: profile?.picture,
+          }
+        );
+
+        console.log("Response:", response.data);
+      } catch (error: any) {
+        if (
+          axios.isAxiosError(error) &&
+          error.response?.status === 409
+        ) {
+          return true;
+        } else {
+          console.error("Error:", error);
+        }
+      }
 
       return true;
     },

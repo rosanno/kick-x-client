@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Search, Heart } from "lucide-react";
 import { BsHandbag } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 import { useScrollHide } from "@/hooks/use-scroll-hide";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,7 @@ import { Logo } from "./ui/logo";
 
 export const Nav = () => {
   const { isScrolledUp } = useScrollHide();
+  const router = useRouter();
 
   return (
     <header
@@ -37,7 +39,10 @@ export const Nav = () => {
           <Heart className="h-5 w-5" />
         </div>
         <div className="border-l h-3" />
-        <div role="button">
+        <div
+          role="button"
+          onClick={() => router.push("/cart")}
+        >
           <BsHandbag className="text-xl" />
         </div>
       </div>

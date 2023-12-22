@@ -3,6 +3,8 @@
 import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 import { formatter } from "@/lib/utils";
 import { Products } from "@/types";
@@ -14,6 +16,17 @@ interface ProductProps {
 export const PopularCollections = ({
   products,
 }: ProductProps) => {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  const handleAddToCart = () => {
+    if (session) {
+      console.log("added to cart");
+    } else {
+      router.push("/sign-in");
+    }
+  };
+
   return (
     <section className="mt-16">
       <div>
@@ -36,11 +49,11 @@ export const PopularCollections = ({
         </div>
         <div className="grid md:grid-cols-2 gap-6 items-center mt-5">
           {products.map((product) => (
-            <Link
-              href={`${product.slug}/${product.id}`}
+            <div
               key={product.id}
+              className="bg-[#F8F8FA] relative"
             >
-              <div className="bg-[#F8F8FA] relative">
+              <Link href={`${product.slug}/${product.id}`}>
                 <div className="flex items-center justify-center">
                   <Image
                     src={product.images[0]?.image_path}
@@ -58,9 +71,11 @@ export const PopularCollections = ({
                     {formatter.format(product.price)}
                   </h2>
                 </div>
-                <div
-                  role="button"
-                  className="
+              </Link>
+              <div
+                role="button"
+                onClick={handleAddToCart}
+                className="
                   flex 
                   items-center 
                   gap-1.5 
@@ -76,14 +91,13 @@ export const PopularCollections = ({
                   top-4 
                   right-4
                 "
-                >
-                  <ShoppingBag className="h-4 w-4" />
-                  <span className="text-xs font-semibold">
-                    Add to Card
-                  </span>
-                </div>
+              >
+                <ShoppingBag className="h-4 w-4" />
+                <span className="text-xs font-semibold">
+                  Add to Card
+                </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

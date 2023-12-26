@@ -26,11 +26,11 @@ export const Brands = ({ brands }: BrandProps) => {
             Brands
           </h2>
         </div>
-        <div className="flex items-center gap-9">
+        <div className="w-full md:w-auto flex items-center justify-center gap-9">
           {brands.map((brand, index) => (
             <div
               key={brand.id}
-              className="flex items-center gap-1.5"
+              className="flex items-center justify-center gap-1.5"
             >
               {brand.brand_logo !== null && (
                 <Image
